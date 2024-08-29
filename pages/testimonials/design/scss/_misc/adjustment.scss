@@ -10,23 +10,6 @@
 
 html {
   font-size: 16px;
-
-  // Adaptive + Responsive
-  // @include xl {
-  //   font-size: 16px;
-  // }
-  // @include lg {
-  //   font-size: 16px;
-  // }
-  // @include md {
-  //   font-size: 15px;
-  // }
-  // @include sm {
-  //   font-size: 14px;
-  // }
-  // @include xsm {
-  //   font-size: 12px;
-  // }
 }
 
 h1,
@@ -48,7 +31,6 @@ html {
 }
 
 body {
-  // font-size: 16px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
 }
@@ -56,33 +38,6 @@ body {
 .wrapper {
   position: relative;
   min-height: 100%;
-  // overflow: hidden;
-  // min-width: $viewport-width;
-}
-
-// .mcontent {
-//   padding-bottom: 20px;
-// }
-
-.container {
-  max-width: $container-width;
-
-  // Adaptive + Responsive
-  @include xl {
-    max-width: 1140px;
-  }
-  @include lg {
-    max-width: 960px;
-  }
-  @include md {
-    max-width: 720px;
-  }
-  @include sm {
-    max-width: 540px;
-  }
-  @include xsm {
-    max-width: auto;
-  }
 }
 
 ul {

@@ -3,12 +3,14 @@
   src: url("../fonts/Barlow_Semi_Condensed/barlowsemicondensed-medium-webfont.woff2") format("woff2"), url("../fonts/Barlow_Semi_Condensed/barlowsemicondensed-medium-webfont.woff") format("woff"), url("../fonts/Barlow_Semi_Condensed/barlowsemicondensed-medium-webfont.svg#barlow_semi_condensedmedium") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "barlow_semi_condensed_semibold";
   src: url("../fonts/Barlow_Semi_Condensed/barlowsemicondensed-semibold-webfont.woff2") format("woff2"), url("../fonts/Barlow_Semi_Condensed/barlowsemicondensed-semibold-webfont.woff") format("woff"), url("../fonts/Barlow_Semi_Condensed/barlowsemicondensed-semibold-webfont.svg#barlow_semi_condensedsemibold") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -397,35 +399,6 @@ body {
   min-height: 100%;
 }
 
-.container {
-  max-width: 1110px;
-}
-@media screen and (max-width: 1400px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .container {
-    max-width: auto;
-  }
-}
-
 ul {
   list-style: none;
   padding: 0;
@@ -446,7 +419,6 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   gap: 1.625rem 1.875rem;
   font-family: "barlow_semi_condensed_medium", sans-serif;
-  font-display: swap;
   max-width: 1110px;
 }
 @media screen and (max-width: 1400px) {
@@ -548,7 +520,6 @@ ul {
 
 .testimonials__author-name {
   font-family: "barlow_semi_condensed_semibold", sans-serif;
-  font-display: swap;
 }
 
 .testimonials__author-status {
@@ -559,7 +530,6 @@ ul {
 .testimonials__card-title {
   margin-top: 1.0625rem;
   font-family: "barlow_semi_condensed_semibold", sans-serif;
-  font-display: swap;
   font-size: 1.25rem;
   line-height: 1.4375rem;
 }
