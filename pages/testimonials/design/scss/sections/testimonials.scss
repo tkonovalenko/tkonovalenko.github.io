@@ -1,0 +1,124 @@
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: PxToRem(26px) PxToRem(30px);
+
+  @include fontBarlow(medium);
+
+  max-width: $container-width;
+
+  // Adaptive + Responsive
+  @include xl {
+    max-width: 1110px;
+  }
+  @include lg {
+    max-width: 960px;
+  }
+  @include md {
+    max-width: 720px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: PxToRem(24px);
+    margin: PxToRem(70px) 0;
+  }
+  @include sm {
+    max-width: 540px;
+  }
+  @include xsm {
+    max-width: calc(100% - PxToRem(24px) * 2);
+  }
+}
+
+.testimonials__card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  border-radius: PxToRem(7px);
+  background-color: $dflt-card-color;
+  padding: PxToRem(26px) 2.05rem;
+  @include box-shadow(
+    PxToRem(40px) PxToRem(45px) PxToRem(52px) PxToRem(-26px) rgba(0, 0, 0, 0.1)
+  );
+}
+
+.testimonials__card--doubled-h {
+  grid-column-end: span 2;
+
+  @include md {
+    grid-column: span 1;
+  }
+}
+
+.testimonials__card--doubled-v {
+  grid-column: 4 / 5;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+
+  @include md {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+.testimonials__card--purple {
+  background: no-repeat url("../images/bg-pattern-quotation.svg"), $card-accent1;
+  background-position: 66.1% 0;
+  color: white;
+
+  @include md {
+    background-position: 90% 0;
+  }
+}
+
+.testimonials__card--grey {
+  background-color: $card-accent2;
+  color: white;
+}
+
+.testimonials__card--black {
+  background-color: $card-accent3;
+  color: white;
+}
+
+.testimonials__card-author {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.testimonials__author-photo {
+  border-radius: 50%;
+  @include square(PxToRem(28px));
+}
+
+.testimonials__author-data {
+  margin-left: PxToRem(15px);
+}
+
+.testimonials__author-name {
+  @include fontBarlow(semibold);
+}
+
+.testimonials__author-status {
+  opacity: 50%;
+  font-size: PxToRem(11px);
+}
+
+.testimonials__card-title {
+  margin-top: PxToRem(17px);
+  @include fontBarlow(semibold);
+  font-size: PxToRem(20px);
+  line-height: PxToRem(23px);
+}
+
+.testimonials__card-text {
+  margin-top: PxToRem(19px);
+  opacity: 70%;
+}
+
+@each $photo in $author-photos {
+  .testimonials__author-photo--#{$photo} {
+    background-image: url("../images/image-#{$photo}.jpg");
+    background-size: contain;
+  }
+}

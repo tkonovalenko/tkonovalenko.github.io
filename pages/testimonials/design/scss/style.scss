@@ -1,0 +1,28 @@
+// INSTRUMENTS
+@import "./_misc/functions.scss";
+@import "./_misc/mixins.scss";
+@import "./_misc/placeholders.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/normalize.scss";
+
+// $footer-height: 0;
+// $viewport-width: 1440px;
+$container-width: 1110px;
+$container-padding: 0;
+@import "./_misc/adjustment.scss";
+
+// SECTIONS
+$bg-color: hsl(210, 46%, 95%);
+@import "./sections/page-content.scss";
+
+$dflt-card-color: hsl(0, 0%, 100%);
+$card-accent1: hsl(263, 55%, 52%);
+$card-accent2: hsl(217, 19%, 35%);
+$card-accent3: hsl(219, 29%, 14%);
+$card-accent4: hsl(0, 0%, 81%);
+
+$author-photos: daniel, jeanette, jonathan, kira, patrick;
+@import "./sections/testimonials.scss";
+
+//Devices
+// @import "./devices/mobile_375px.scss";

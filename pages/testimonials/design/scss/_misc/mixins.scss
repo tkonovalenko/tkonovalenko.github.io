@@ -1,0 +1,54 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin box-shadow($params: 0 3px 3px #d5d5d5) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  box-shadow: $params;
+}
+
+@mixin inline-block($vertical-align: top) {
+  display: inline-block;
+  vertical-align: $vertical-align;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+// $widthElement, $widthTotal - in px
+@mixin widthInPercent($widthElement, $widthTotal) {
+  width: calc($widthElement * 100% / $widthTotal);
+}
+
+@mixin xl {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin md {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin xsm {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}
