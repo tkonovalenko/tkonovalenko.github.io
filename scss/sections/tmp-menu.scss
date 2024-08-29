@@ -1,0 +1,23 @@
+.tmp-menu {
+  background: #2c72ff;
+  border-radius: 15px;
+  border: #003399 solid 5px;
+  width: 50%;
+  height: 600px;
+  min-width: 250px;
+  max-width: 600px;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tmp-menu__list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}

@@ -1,0 +1,56 @@
+.button {
+  // max-width: PxToRem(170px);
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #c38a10;
+  font-size: PxToRem(24px);
+  font-weight: 600;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+
+  padding: PxToRem(9px) PxToRem(13px);
+  border: 3px solid #c38a10;
+  border-radius: PxToRem(25px);
+  background-color: transparent;
+
+  &:hover {
+    background-color: #c38a10;
+    border-color: #c38a10;
+    color: #f1f6ff;
+  }
+
+  &--blue {
+    color: white;
+    border: 3px solid white;
+
+    &:hover {
+      color: #003399;
+      border: 3px solid #003399;
+      background-color: white;
+    }
+  }
+
+  &--nohover {
+    pointer-events: none;
+  }
+}
+
+.button__ico {
+  display: inline-block;
+  vertical-align: middle;
+  width: PxToRem(16px);
+}
+
+.button__ico--color_white {
+  display: none;
+}
+
+.button:hover .button__ico--color_gold {
+  display: none;
+}
+
+.button:hover .button__ico--color_white {
+  display: inline-block;
+}

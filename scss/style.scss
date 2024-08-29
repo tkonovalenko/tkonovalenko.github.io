@@ -1,0 +1,28 @@
+//PLUGINS
+// @import "../plugins/fontawesome/scss/fontawesome.scss";
+// @import "../plugins/fontawesome/scss/solid.scss";
+
+// INSTRUMENTS
+@import "./_misc/functions.scss";
+@import "./_misc/mixins.scss";
+@import "./_misc/placeholders.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/normalize.scss";
+
+// Adaptive - Max Value
+$container-width: 960px;
+// Responsive - in % or with calc()
+// $container-width: 83.33%;
+// $container-width: calc(100% - PxToRem(200px));
+
+$footer-height-desc: PxToRem(50px);
+$footer-height-tabl: PxToRem(50px);
+$footer-height-mobile: PxToRem(114px);
+@import "./_misc/adjustment.scss";
+
+// PAGES
+@import "./pages/index.scss";
+
+// SECTIONS
+@import "./sections/tmp-menu.scss";
+@import "./sections/button.scss";

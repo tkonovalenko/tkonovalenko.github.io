@@ -1,0 +1,13 @@
+@use "sass:color";
+
+.wrapper {
+  background-color: color.scale(#6b717f, $lightness: 80%);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    display: none;
+  }
+}
