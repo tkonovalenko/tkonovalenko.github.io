@@ -1,7 +1,18 @@
 .team-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  margin-top: PxToRem(30px);
+  margin-bottom: PxToRem(30px);
   gap: PxToRem(15px) PxToRem(15px);
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .team-cards--grey {
@@ -11,8 +22,9 @@
 
 .team-cards--main {
   font-size: PxToRem(40px);
-  @include fontMontsAlter(extra-light);
-  grid-column: 1 / span 2;
+  @include fontMontsAlter(xlight);
+  grid-column: span 2;
+  grid-row: span 2;
   padding: PxToRem(40px) PxToRem(32px) PxToRem(40px) PxToRem(32px);
 }
 
@@ -22,6 +34,13 @@
   gap: PxToRem(15px) PxToRem(15px);
 
   grid-column: 3 / -1;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .team-cards__member-link {
@@ -30,11 +49,42 @@
   display: flex;
   flex-flow: column;
   justify-content: end;
+  text-decoration: none;
+}
+
+.team-cards__member-link--tkonovalenko {
+  background-image: url("../img/tkonovalenko.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .team-cards__member-caption {
   background-color: rgba(30, 30, 30, 0.5);
-  @include fontMontsAlter(regular);
+  @include fontMontsAlter(semibold);
   color: white;
-  padding: PxToRem(11px) 0 PxToRem(11px) PxToRem(13px);
+  padding: PxToRem(11px) PxToRem(13px) PxToRem(11px) PxToRem(13px);
+}
+
+.team-cards__photo {
+  @include square(PxToRem(220px));
+  background-image: url("https://picsum.photos/220");
+}
+
+.team-cards__quote {
+  @include fontMontsAlter(regular);
+  padding: PxToRem(11px) PxToRem(13px) PxToRem(11px) PxToRem(13px);
+}
+
+.team-cards__socials {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: PxToRem(20px);
+  padding: PxToRem(11px) PxToRem(13px) PxToRem(11px) PxToRem(13px);
+}
+
+.team-cards__social-link {
+  text-decoration: none;
+  color: #d76559;
+  font-size: PxToRem(20px);
 }

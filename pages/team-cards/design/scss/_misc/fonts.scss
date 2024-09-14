@@ -131,23 +131,23 @@
 @mixin fontMontsAlter($style: medium) {
   @if $style == medium {
     font-family: "montserrat_alternatesmedium", sans-serif;
-  } @else if $style == extra-light {
+  } @else if $style == xlight {
     font-family: "montserrat_alternatesXLt", sans-serif;
-  } @else if $style == extra-light-italic {
+  } @else if $style == xilight {
     font-family: "montserrat_alternatesXLtIt", sans-serif;
   } @else if $style == italic {
     font-family: "montserrat_alternatesitalic", sans-serif;
   } @else if $style == light {
     font-family: "montserrat_alternateslight", sans-serif;
-  } @else if $style == light-italic {
+  } @else if $style == ilight {
     font-family: "montserrat_alternatesLtIt", sans-serif;
-  } @else if $style == medium-italic {
+  } @else if $style == imedium {
     font-family: "montserrat_alternatesMdIt", sans-serif;
   } @else if $style == regular {
     font-family: "montserrat_alternatesregular", sans-serif;
   } @else if $style == semibold {
     font-family: "montserrat_alternatessemibold", sans-serif;
-  } @else if $style == semibold-italic {
+  } @else if $style == isemibold {
     font-family: "montserrat_alternatesSBdIt", sans-serif;
   }
 }

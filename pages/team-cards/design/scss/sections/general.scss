@@ -5,3 +5,24 @@
   justify-content: center;
   align-items: center;
 }
+
+.header {
+  background-image: url("https://picsum.photos/1140/400");
+  min-height: PxToRem(400px);
+  grid-column: 1 / -1;
+  padding: PxToRem(45px);
+}
+
+.header__title {
+  font-size: PxToRem(25px);
+  color: white;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  @include fontMontsAlter(semibold);
+}
+
+.header__subtitle {
+  font-size: PxToRem(22px);
+  color: #d76559;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  @include fontMontsAlter(semibold);
+}
