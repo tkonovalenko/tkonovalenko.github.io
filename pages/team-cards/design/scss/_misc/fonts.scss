@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "montserrat_alternatesXLt";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-extralight-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-extralight-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-extralight-webfont.svg#montserrat_alternatesXLt")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesXLtIt";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-extralightitalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-extralightitalic-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-extralightitalic-webfont.svg#montserrat_alternatesXLtIt")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesitalic";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-italic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-italic-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-italic-webfont.svg#montserrat_alternatesitalic")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternateslight";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-light-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-light-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-light-webfont.svg#montserrat_alternateslight")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesLtIt";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-lightitalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-lightitalic-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-lightitalic-webfont.svg#montserrat_alternatesLtIt")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesmedium";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-medium-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-medium-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-medium-webfont.svg#montserrat_alternatesmedium")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesMdIt";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-mediumitalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-mediumitalic-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-mediumitalic-webfont.svg#montserrat_alternatesMdIt")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesregular";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-regular-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-regular-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-regular-webfont.svg#montserrat_alternatesregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatessemibold";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-semibold-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-semibold-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-semibold-webfont.svg#montserrat_alternatessemibold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat_alternatesSBdIt";
+  src: url("../fonts/Montserrat_Alternates/montserratalternates-semibolditalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-semibolditalic-webfont.woff")
+      format("woff"),
+    url("../fonts/Montserrat_Alternates/montserratalternates-semibolditalic-webfont.svg#montserrat_alternatesSBdIt")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin fontMontsAlter($style: medium) {
+  @if $style == medium {
+    font-family: "montserrat_alternatesmedium", sans-serif;
+  } @else if $style == extra-light {
+    font-family: "montserrat_alternatesXLt", sans-serif;
+  } @else if $style == extra-light-italic {
+    font-family: "montserrat_alternatesXLtIt", sans-serif;
+  } @else if $style == italic {
+    font-family: "montserrat_alternatesitalic", sans-serif;
+  } @else if $style == light {
+    font-family: "montserrat_alternateslight", sans-serif;
+  } @else if $style == light-italic {
+    font-family: "montserrat_alternatesLtIt", sans-serif;
+  } @else if $style == medium-italic {
+    font-family: "montserrat_alternatesMdIt", sans-serif;
+  } @else if $style == regular {
+    font-family: "montserrat_alternatesregular", sans-serif;
+  } @else if $style == semibold {
+    font-family: "montserrat_alternatessemibold", sans-serif;
+  } @else if $style == semibold-italic {
+    font-family: "montserrat_alternatesSBdIt", sans-serif;
+  }
+}
+
+// @mixin fontFira($style: regular) {
+//   @if $style == regular {
+//     font-family: "fira_sansregular", sans-serif;
+//   } @else if $style == bold {
+//     font-family: "fira_sansbold", sans-serif;
+//   } @else if $style == light {
+//     font-family: "fira_sanslight", sans-serif;
+//   } @else if $style == medium {
+//     font-family: "fira_sansmedium", sans-serif;
+//   }
+//   font-display: swap;
+// }
+
+// @mixin fontBarlow($style: medium) {
+//   @if $style == medium {
+//     font-family: "barlow_semi_condensed_medium", sans-serif;
+//   } @else if $style == semibold {
+//     font-family: "barlow_semi_condensed_semibold", sans-serif;
+//   }
+//   font-display: swap;
+// }

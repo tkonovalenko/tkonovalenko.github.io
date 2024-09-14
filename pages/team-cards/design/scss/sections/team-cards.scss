@@ -1,0 +1,40 @@
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: PxToRem(15px) PxToRem(15px);
+}
+
+.team-cards--grey {
+  background-color: #1e1e1e;
+  color: #a5a5a5;
+}
+
+.team-cards--main {
+  font-size: PxToRem(40px);
+  @include fontMontsAlter(extra-light);
+  grid-column: 1 / span 2;
+  padding: PxToRem(40px) PxToRem(32px) PxToRem(40px) PxToRem(32px);
+}
+
+.team-cards__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: PxToRem(15px) PxToRem(15px);
+
+  grid-column: 3 / -1;
+}
+
+.team-cards__member-link {
+  @include square(PxToRem(220px));
+  background-image: url("https://picsum.photos/220");
+  display: flex;
+  flex-flow: column;
+  justify-content: end;
+}
+
+.team-cards__member-caption {
+  background-color: rgba(30, 30, 30, 0.5);
+  @include fontMontsAlter(regular);
+  color: white;
+  padding: PxToRem(11px) 0 PxToRem(11px) PxToRem(13px);
+}

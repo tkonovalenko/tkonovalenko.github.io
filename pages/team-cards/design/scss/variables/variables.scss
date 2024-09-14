@@ -1,0 +1,14 @@
+// Static
+$viewport-width: 1400px;
+
+// Static + Adaptive - Max Value
+$container-width: 1140px;
+// Responsive - in % or with calc()
+// $container-width: 83.33%;
+// $container-width: calc(100% - PxToRem(200px));
+
+$footer-height-desc: PxToRem(50px);
+$footer-height-tabl: PxToRem(50px);
+$footer-height-mobile: PxToRem(114px);
+
+$wrapper-bgc: #0e0e0e;

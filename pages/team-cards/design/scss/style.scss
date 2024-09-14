@@ -1,0 +1,23 @@
+//PLUGINS
+@import "../../plugins/fontawesome/scss/fontawesome.scss";
+@import "../../plugins/fontawesome/scss/solid.scss";
+
+//VARIABLES
+@import "./variables/variables.scss";
+
+// INSTRUMENTS
+@import "./_misc/functions.scss";
+@import "./_misc/mixins.scss";
+@import "./_misc/placeholders.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/normalize.scss";
+
+//Static works with "<meta name="viewport" content="width=X">" in .html
+// @import "./_misc/adjustment/adjustment-static.scss";
+// @import "./_misc/adjustment/adjustment-rubber.scss";
+// @import "./_misc/adjustment/adjustment-adaptive.scss";
+@import "./_misc/adjustment/adjustment-responsive.scss";
+
+// SECTIONS
+@import "./sections/general.scss";
+@import "./sections/team-cards.scss";
