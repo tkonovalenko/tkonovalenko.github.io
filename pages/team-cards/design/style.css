@@ -10998,8 +10998,7 @@ ul {
 }
 
 .team-cards__member-link {
-  width: 13.75rem;
-  height: 13.75rem;
+  min-height: 13.75rem;
   background-image: url("https://picsum.photos/220");
   display: flex;
   flex-flow: column;
@@ -11021,8 +11020,7 @@ ul {
 }
 
 .team-cards__photo {
-  width: 13.75rem;
-  height: 13.75rem;
+  min-height: 13.75rem;
   background-image: url("https://picsum.photos/220");
 }
 
@@ -11043,4 +11041,16 @@ ul {
   text-decoration: none;
   color: #d76559;
   font-size: 1.25rem;
+}
+
+.team-cards__video {
+  justify-self: center;
+  width: 13.75rem;
+  min-height: 13.75rem;
+}
+@media screen and (max-width: 768px) {
+  .team-cards__video {
+    grid-column: span 2;
+    width: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
