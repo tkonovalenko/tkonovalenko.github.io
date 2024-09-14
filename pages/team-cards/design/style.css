@@ -10964,6 +10964,21 @@ ul {
   grid-row: span 2;
   padding: 2.5rem 2rem 2.5rem 2rem;
 }
+@media screen and (max-width: 1200px) {
+  .team-cards--main {
+    font-size: 2.1875rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .team-cards--main {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .team-cards--main {
+    font-size: 1.5625rem;
+  }
+}
 
 .team-cards__list {
   display: grid;
