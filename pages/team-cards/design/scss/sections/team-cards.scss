@@ -53,7 +53,6 @@
 }
 
 .team-cards__member-link {
-  // @include square(PxToRem(220px));
   min-height: PxToRem(220px);
   background-image: url("https://picsum.photos/220");
   display: flex;
@@ -76,7 +75,6 @@
 }
 
 .team-cards__photo {
-  // @include square(PxToRem(220px));
   min-height: PxToRem(220px);
   background-image: url("https://picsum.photos/220");
 }
@@ -96,6 +94,7 @@
 
 .team-cards__social-link {
   text-decoration: none;
+  @include fontMontsAlter(regular);
   color: #d76559;
   font-size: PxToRem(20px);
 }

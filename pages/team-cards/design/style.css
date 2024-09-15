@@ -11039,6 +11039,7 @@ ul {
 
 .team-cards__social-link {
   text-decoration: none;
+  font-family: "montserrat_alternatesregular", sans-serif;
   color: #d76559;
   font-size: 1.25rem;
 }
