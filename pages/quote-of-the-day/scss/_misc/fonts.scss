@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "fira_sansbold";
+  src: url("./fonts/FiraSans/firasans-bold-webfont.woff2") format("woff2"),
+    url("./fonts/FiraSans/firasans-bold-webfont.woff") format("woff"),
+    url("./fonts/FiraSans/firasans-bold-webfont.svg#fira_sansbold")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fira_sanslight";
+  src: url("./fonts/FiraSans/firasans-light-webfont.woff2") format("woff2"),
+    url("./fonts/FiraSans/firasans-light-webfont.woff") format("woff"),
+    url("./fonts/FiraSans/firasans-light-webfont.svg#fira_sanslight")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fira_sansmedium";
+  src: url("./fonts/FiraSans/firasans-medium-webfont.woff2") format("woff2"),
+    url("./fonts/FiraSans/firasans-medium-webfont.woff") format("woff"),
+    url("./fonts/FiraSans/firasans-medium-webfont.svg#fira_sansmedium")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fira_sansregular";
+  src: url("./fonts/FiraSans/firasans-regular-webfont.woff2") format("woff2"),
+    url("./fonts/FiraSans/firasans-regular-webfont.woff") format("woff"),
+    url("./fonts/FiraSans/firasans-regular-webfont.svg#fira_sansregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fontFira($style: regular) {
+  @if $style == regular {
+    font-family: "fira_sansregular", sans-serif;
+  } @else if $style == bold {
+    font-family: "fira_sansbold", sans-serif;
+  } @else if $style == light {
+    font-family: "fira_sanslight", sans-serif;
+  } @else if $style == medium {
+    font-family: "fira_sansmedium", sans-serif;
+  }
+  font-display: swap;
+}
+
+@mixin fontBarlow($style: medium) {
+  @if $style == medium {
+    font-family: "barlow_semi_condensed_medium", sans-serif;
+  } @else if $style == semibold {
+    font-family: "barlow_semi_condensed_semibold", sans-serif;
+  }
+  font-display: swap;
+}

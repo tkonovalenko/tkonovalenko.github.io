@@ -1,0 +1,124 @@
+//PLUGINS
+// @import "../plugins/fontawesome/scss/fontawesome.scss";
+// @import "../plugins/fontawesome/scss/solid.scss";
+
+//VARIABLES
+@import "./variables/variables.scss";
+
+// INSTRUMENTS
+@import "./_misc/functions.scss";
+@import "./_misc/mixins.scss";
+@import "./_misc/placeholders.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/normalize.scss";
+
+//Static works with "<meta name="viewport" content="width=X">" in .html
+// @import "./_misc/adjustment/adjustment-static.scss";
+// @import "./_misc/adjustment/adjustment-rubber.scss";
+@import "./_misc/adjustment/adjustment-adaptive.scss";
+// @import "./_misc/adjustment/adjustment-responsive.scss";
+
+// SECTIONS
+.wrapper {
+  background-color: #0f0e0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  margin: PxToRem(20px) auto;
+}
+
+.quote-panel {
+  @include xsm {
+    margin: 0 PxToRem(20px);
+  }
+  text-align: center;
+}
+
+.quote-wrap {
+  position: relative;
+  z-index: 1;
+  padding: PxToRem(10px);
+  border-radius: PxToRem(7px);
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.84);
+  overflow: hidden;
+}
+
+.quote-wrap::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 100vmax;
+  height: 100vmax;
+  top: calc(-50vmax + 50%);
+  left: calc(-50vmax + 50%);
+  background: conic-gradient(
+    #00ff00,
+    #00ff80,
+    #00ffcc,
+    #00ccff,
+    #0066ff,
+    #0033cc,
+    #0000ff,
+    #0000cc,
+    #3300ff,
+    #6600ff,
+    #9900ff,
+    #cc00ff,
+    #ff00ff,
+    #ff00cc,
+    #ff0099,
+    #ff0066,
+    #ff0033,
+    #ff5500,
+    #ffb300,
+    #ffe100,
+    #e5ff00,
+    #91ff00,
+    #00ff00
+  );
+  border-radius: PxToRem(7px);
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.quote {
+  font-size: 1.3rem;
+  color: white;
+  text-align: left;
+  background-color: #141311;
+  padding: 1.25rem 1rem;
+  border-radius: PxToRem(7px);
+}
+
+.quote__author {
+  text-align: right;
+}
+
+.quote__btn {
+  color: black;
+  box-shadow: 0px 0px 30px 8px rgba(0, 0, 0, 0.84);
+  background-color: #d6c7dbb8;
+  border: rgb(242, 242, 242) PxToRem(3px) solid;
+  font-size: 1.3rem;
+  margin-top: PxToRem(30px);
+  padding: 1.25rem 0.5rem;
+  border-radius: PxToRem(7px);
+  cursor: pointer;
+}
+.quote__btn:hover {
+  background-color: #d6c7db;
+  box-shadow: 0px 0px 30px 16px rgba(0, 0, 0, 0.84);
+}
+.quote__btn:focus,
+.quote__btn:active {
+  outline: none;
+}
