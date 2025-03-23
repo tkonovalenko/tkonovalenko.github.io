@@ -1,0 +1,142 @@
+//PLUGINS
+@import "../plugins/fontawesome/scss/fontawesome.scss";
+@import "../plugins/fontawesome/scss/solid.scss";
+
+//VARIABLES
+@import "./variables/variables.scss";
+
+// INSTRUMENTS
+@import "./_misc/functions.scss";
+@import "./_misc/mixins.scss";
+@import "./_misc/placeholders.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/normalize.scss";
+
+@import "./_misc/adjustment/adjustment-responsive.scss";
+
+// PAGES
+.wrapper{
+    background: linear-gradient(137deg, rgba(253,193,192,1) 30%, rgba(155,111,209,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    margin: PxToRem(100px) 0;
+}
+
+.todo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo__card{
+    background-color: white;
+    border-radius: PxToRem(10px);
+    width: PxToRem(350px);
+
+    @include xsm {
+        width: auto;
+        padding: 0 PxToRem(15px);
+    }
+}
+
+.todo__type-btns{
+    height: PxToRem(75px);
+    border-top-left-radius: PxToRem(10px);
+    border-top-right-radius:  PxToRem(10px);
+    display: flex;
+}
+
+.todo__type-btn{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo__type-btn-icon{
+    color: #8d5dc1;
+    font-size: PxToRem(30px);
+}
+
+.todo__content{
+    border-bottom-left-radius: PxToRem(10px);
+    border-bottom-right-radius:  PxToRem(10px);
+    padding: calc(PxToRem(37px) - var(--todo-items-row-gap)) PxToRem(25px) calc(PxToRem(73px) - var(--todo-items-row-gap));
+    @include fontComicNeue(regular);
+}
+
+.todo__list{
+    display: flex;
+    flex-direction: column;
+    row-gap: PxToRem(5px);
+}
+
+.todo__list-item{
+    cursor: pointer;
+    padding: var(--todo-items-row-gap) 0;
+}
+
+.todo__list-label{
+    cursor: pointer;
+    display: flex;
+    column-gap: PxToRem(20px);
+}
+
+.todo__list-check{
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &::before{
+        content: "";
+        display: block;
+        @include square(PxToRem(23px));
+        border-radius: PxToRem(5px);
+        border: solid #e6e4e7 PxToRem(3px);
+    }
+
+    &::after{
+        display: block;
+        font-family: 'Font Awesome 6 Free';
+        position: absolute;
+        content: "\f00c";
+        color: #b98dca;
+        top: PxToRem(-1px);
+        left: PxToRem(4px);
+        font-size: PxToRem(20px);
+    }
+}
+
+.todo__list-item[data-checked="false"] .todo__list-check{
+    &::after{
+        visibility: hidden;
+    }
+}
+.todo__list-item[data-checked="true"] .todo__list-check{
+    &::after{
+        visibility: visible;
+    }
+}
+
+.todo__button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 50%;
+    @include square(PxToRem(75px));
+    background-color: #ffbb74;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(-1 * calc(PxToRem(75px) / 2));
+}
+
+.todo__button-icon {
+    color: white;
+    font-size: PxToRem(30px);
+}

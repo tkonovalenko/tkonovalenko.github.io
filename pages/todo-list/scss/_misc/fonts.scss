@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "comic_neue_bold";
+  src: url("./fonts/ComicNeue/subset-ComicNeue-Bold.woff2") format("woff2"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Bold.woff") format("woff"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Bold.svg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "comic_neue_italic";
+  src: url("./fonts/ComicNeue/subset-ComicNeue-Italic.woff2") format("woff2"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Italic.woff") format("woff"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Italic.svg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "comic_neue_light";
+  src: url("./fonts/ComicNeue/subset-ComicNeue-Light.woff2") format("woff2"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Light.woff") format("woff"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Light.svg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "comic_neue_regular";
+  src: url("./fonts/ComicNeue/subset-ComicNeue-Regular.woff2") format("woff2"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Regular.woff") format("woff"),
+    url("./fonts/ComicNeue/subset-ComicNeue-Regular.svg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin fontComicNeue($style: regular) {
+  @if $style == regular {
+    font-family: "comic_neue_regular", sans-serif;
+  } @else if $style == bold {
+    font-family: "comic_neue_bold", sans-serif;
+  } @else if $style == light {
+    font-family: "comic_neue_light", sans-serif;
+  } @else if $style == italic {
+    font-family: "comic_neue_italic", sans-serif;
+  }
+  font-display: swap;
+}
