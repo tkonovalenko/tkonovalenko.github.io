@@ -1,0 +1,11 @@
+@function PxToRem($px) {
+  @return calc($px / 16px) * 1rem;
+}
+
+@function rem($px) {
+  @return calc($px / 16px) * 1rem;
+}
+
+@function PxToPercnt($px, $pxTotal) {
+  @return calc($px * 100% / $pxTotal);
+}

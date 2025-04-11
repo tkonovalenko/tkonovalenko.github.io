@@ -1,0 +1,157 @@
+//PLUGINS
+@import "../plugins/fontawesome/scss/fontawesome.scss";
+@import "../plugins/fontawesome/scss/solid.scss";
+
+//VARIABLES
+@import "./variables/variables.scss";
+
+// INSTRUMENTS
+@import "./_misc/functions.scss";
+@import "./_misc/mixins.scss";
+@import "./_misc/placeholders.scss";
+@import "./_misc/fonts.scss";
+@import "./_misc/normalize.scss";
+
+//Static works with "<meta name="viewport" content="width=X">" in .html
+// @import "./_misc/adjustment/adjustment-static.scss";
+// @import "./_misc/adjustment/adjustment-rubber.scss";
+// @import "./_misc/adjustment/adjustment-adaptive.scss";
+@import "./_misc/adjustment/adjustment-responsive.scss";
+
+// PAGES
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap');
+
+:root {
+    --screen2-height: 70px;
+    --color-decor: rgb(107, 122, 255);
+    --color-decor-border: rgb(74, 37, 221);
+}
+
+.wrapper{
+    background-image: url("./resources/decor/bg.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito Sans', sans-serif;
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: black;
+        opacity: 85%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.answer-form {
+    width: 50%;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: PxToRem(10px);
+}
+
+input {
+    height: var(--screen2-height);
+    border-radius: 15px;
+    padding: 0 30px;
+    outline: 0;
+    text-align: center;
+
+    &[data-state="wrong"]{
+        border: solid 5px rgb(221, 65, 37);
+    }
+
+    &[data-state="correct"]{
+        border: solid 5px var(--color-decor-border);
+    }
+
+    &[data-size="small"]{
+        width: PxToRem(100px);
+        padding: 0;
+    }
+}
+
+.btn {
+    height: var(--screen2-height);
+    font-weight: bold;
+    font-size: PxToRem(25px);
+    color: white;
+    background-color: var(--color-decor);
+    border: solid 5px var(--color-decor-border);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ok {
+    width: 100px;
+
+    &[data-active="true"]{
+        color: white;
+        background-color: --color-decor;
+        border: solid 5px var(--color-decor-border);
+        cursor: pointer;
+    }
+    
+    &[data-active="false"]{
+        color: #333;
+        background-color: rgb(165, 165, 165);
+        border: solid 5px rgb(88, 88, 88);
+        pointer-events: none;
+    }
+}
+
+.text {
+    text-align: center;
+    line-height: 1.2em;
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 0.4375rem;
+    border: solid 5px rgb(220, 220, 220);
+
+    p{
+        margin-top: PxToRem(30px);
+
+        &:first-child{
+            margin-top:0;
+        }
+    }
+}
+
+.start {
+    width: 200px;
+}
+
+.restart {
+    display: none;
+    width: 300px;
+}
+
+[data-display="none"]{
+    display: none;
+}
+
+[data-display="block"]{
+    display: block;
+}
+
+[data-display="flex"]{
+    display: flex;
+}

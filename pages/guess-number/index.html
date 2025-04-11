@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- STATIC -->
+    <!-- <meta name="viewport" content="width=1200"> -->
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form action="" class="answer-form" name="guess-form" data-display="none">
+                <input type="text" autocomplete="off" data-state="correct" class="input-number" name="user-answer"
+                    value="0">
+                <button class="btn ok" type="button" id="ok-btn">Ok</button>
+            </form>
+            <div class="text" id="hint">
+                <p>The goal of the game is to guess the integer that the computer has "thought of"</p>
+                <p>
+                    The range of secret numbers starts from 0. The maximum possible number is determined by the player.
+                    After each attempt to guess the number, the computer will indicate whether the secret number is
+                    greater
+                    or smaller than the number entered by the player.
+                </p>
+                <p>
+                    Using this information, the player must guess the number in the fewest possible attempts.
+                </p>
+            </div>
+
+            <button class="btn start" id="start-btn">Start</button>
+            <button class="btn restart" id="restart-btn">Restart</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
